@@ -1,23 +1,14 @@
-bool isPalindrome(int x){
-   /*if(x<0){
-       return false;
+int* twoSum(int* nums, int numsSize, int target, int* returnSize){
+    *returnSize=2;
+    int *arr=(int *)malloc((*returnSize)*sizeof(int));
+    for(int i=0;i<(numsSize-1);i++){
+        for(int j=i+1;j<numsSize;j++){
+            if(nums[i]+nums[j]==target){
+                arr[0]=i;
+                arr[1]=j;
+                break;
+            }
+        }
     }
-    long int sum=0;
-    int input=x;
-    while(x!=0){
-       sum=sum*10+x%10;
-       x/=10; 
-    }
-    return (sum==input);*/
-    long int rev = 0;
-    int temp = x;
-    if(x<0)
-	return false;
-
-    while(x){
-      rev = rev * 10 + x % 10;
-      x /= 10;
-    }
-        
-    return (temp == rev);
+    return arr;
 }
