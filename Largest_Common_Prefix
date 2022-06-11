@@ -1,0 +1,12 @@
+char * longestCommonPrefix(char ** strs, int strsSize){
+    char *word[strsSize];
+    for(int i=0;i<strsSize;i++){
+        word[i]=strs[0];
+    }
+    
+   
+    printf("**str = %d\n", sizeof(word));
+    printf("**str = %d\n", sizeof(word[0]));
+    
+    return "test";
+}
